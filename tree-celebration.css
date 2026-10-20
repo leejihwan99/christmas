@@ -1,0 +1,13 @@
+/* Only the completed tree glows; the rest of the page stays steady. */
+.hero.complete #tree{animation:tree-breathe 3.8s ease-in-out infinite}
+.hero.complete .tree-scene:before{animation:tree-aura 3.8s ease-in-out infinite}
+.hero.complete #sparkles{animation:tree-sparkle 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.hero.complete #lights circle{animation:tree-light-twinkle 2.8s ease-in-out infinite}
+.hero.complete #lights circle:nth-child(3n+1){animation-delay:-.9s}
+.hero.complete #lights circle:nth-child(3n+2){animation-delay:-1.8s}
+.hero.complete #star{filter:drop-shadow(0 0 9px #ffe8a9)}
+@keyframes tree-breathe{0%,100%{filter:brightness(.94) drop-shadow(0 0 8px #e6bcff35)}50%{filter:brightness(1.17) drop-shadow(0 0 22px #e6bcff75)}}
+@keyframes tree-aura{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:1;transform:scale(1.05)}}
+@keyframes tree-sparkle{0%,100%{opacity:.35;filter:brightness(1);transform:scale(.94)}50%{opacity:1;filter:brightness(1.5);transform:scale(1.06)}}
+@keyframes tree-light-twinkle{0%,100%{opacity:.6;filter:drop-shadow(0 0 1px #ffe7a0)}50%{opacity:1;filter:drop-shadow(0 0 5px #fff1b9)}}
+@media(prefers-reduced-motion:reduce){.hero.complete #tree,.hero.complete .tree-scene:before,.hero.complete #sparkles,.hero.complete #lights circle{animation:none}.hero.complete #tree{filter:brightness(1.08) drop-shadow(0 0 15px #e6bcff55)}}
